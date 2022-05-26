@@ -15,3 +15,7 @@ black:
 .PHONY: pytest
 pytest:
 	poetry run pytest --cov=./tests --black -rAP 
+
+.PHONY: api
+api:
+	poetry run uvicorn main:app --reload
